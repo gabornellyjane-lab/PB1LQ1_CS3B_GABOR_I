@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- PB1-LQ1: RSA Signup Form - 1024-bit -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA Sign Up - 1024-bit</title>
+    <link rel="stylesheet" href="sursa.css">
+
+    <!-- JSEncrypt library for RSA encryption and decryption -->
+    <script src="https://cdn.jsdelivr.net/npm/jsencrypt@latest/bin/jsencrypt.min.js"></script>
+    <script src="sursa.js" defer></script>
+</head>
+<body data-key-size="1024">
+    <!-- Main signup container -->
+    <main class="container">
+        <header class="page-header">
+            <p class="tag">PB1-LQ1 | RSA ENCRYPTION</p>
+            <h1>Create Your Account</h1>
+            <p>1024-bit RSA Encryption and Decryption Demo</p>
+        </header>
+
+        <!-- Signup form -->
+        <section class="panel">
+            <h2>Enrollment / Signup Form</h2>
+
+            <form id="signupForm">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" type="text" placeholder="Enter your full name" required>
+
+                <label for="dob">Date of Birth</label>
+                <input id="dob" type="date" required>
+
+                <label for="yearLevel">Year Level</label>
+                <select id="yearLevel" required>
+                    <option value="">Select year level</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                    <option>5th Year</option>
+                </select>
+
+                <label for="gender">Gender</label>
+                <select id="gender" required>
+                    <option value="">Select gender</option>
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Prefer not to say</option>
+                </select>
+
+                <label for="username">Username</label>
+                <input id="username" type="text" placeholder="Choose a username" required>
+
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter a demo password" required>
+
+                <button type="submit">Encrypt Form Data</button>
+            </form>
+
+            <p class="note">
+                Classroom demonstration only. Use fictional information.
+            </p>
+        </section>
+
+        <!-- Encryption and decryption results -->
+        <section class="panel results">
+            <h2>Encryption Result</h2>
+            <p class="description">
+                Each field is encrypted separately using the RSA public key.
+            </p>
+            <pre id="encryptedOutput">Your encrypted data will appear here.</pre>
+
+            <h2>Decryption Result</h2>
+            <p class="description">
+                The private key decrypts the encrypted fields.
+            </p>
+            <pre id="decryptedOutput">Your decrypted data will appear here.</pre>
+
+            <details>
+                <summary>View demonstration keys</summary>
+                <h3>Public Key</h3>
+                <pre id="publicKeyOutput">Not generated yet.</pre>
+                <h3>Private Key</h3>
+                <pre id="privateKeyOutput">Not generated yet.</pre>
+            </details>
+        </section>
+
+        <footer>
+            <p>PB1-LQ1 | RSA 1024-bit Demo</p>
+            <a href="sign_up_rsa_3072.html">Open 3072-bit RSA Version →</a>
+        </footer>
+    </main>
+</body>
+</html>
